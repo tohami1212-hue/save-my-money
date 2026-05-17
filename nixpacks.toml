@@ -9,7 +9,6 @@ nixPkgs = [
   "freetype",
   "freetype.dev",
   "harfbuzz",
-  "cacert",
   "dejavu_fonts",
   "alsa-lib",
   "cups",
