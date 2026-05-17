@@ -1,0 +1,45 @@
+# Railway/Nixpacks build config.
+# Installs Chromium system dependencies needed by Puppeteer
+# (israeli-bank-scrapers bundles its own Chromium, but needs these libs).
+
+[phases.setup]
+nixPkgs = [
+  "chromium",
+  "nss",
+  "freetype",
+  "freetype.dev",
+  "harfbuzz",
+  "ca-certificates",
+  "ttf-dejavu",
+  "alsaLib",
+  "cups",
+  "libdrm",
+  "mesa",
+  "libGL",
+  "at-spi2-atk",
+  "atkmm",
+  "xorg.libX11",
+  "xorg.libXcomposite",
+  "xorg.libXdamage",
+  "xorg.libXext",
+  "xorg.libXfixes",
+  "xorg.libxcb",
+  "xorg.libXrandr",
+  "libxkbcommon",
+  "gtk3",
+  "pango",
+  "cairo",
+  "glib",
+  "dbus",
+  "expat",
+  "udev",
+  "xorg.libXtst",
+  "xorg.libXScrnSaver",
+  "gdk-pixbuf",
+]
+
+[phases.build]
+cmds = ["npm run build"]
+
+[start]
+cmd = "npm run start"
