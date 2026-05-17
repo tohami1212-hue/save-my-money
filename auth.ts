@@ -6,6 +6,7 @@ import { db } from "@/db";
 import { users } from "@/db/schema";
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
+  trustHost: true,
   // JWT sessions — no adapter needed for credentials-only auth.
   // Sessions are stored in a signed, encrypted cookie; nothing in the DB.
   session: { strategy: "jwt" },
