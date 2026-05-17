@@ -4,6 +4,7 @@
 
 [phases.setup]
 nixPkgs = [
+  "nodejs",
   "chromium",
   "nss",
   "freetype",
